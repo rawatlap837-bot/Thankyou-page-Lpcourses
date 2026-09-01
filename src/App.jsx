@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MessageCircle, Check, Mail, Calendar } from "lucide-react";
+import { MessageCircle, Check } from "lucide-react";
 import CALogo from "../src/assets/CA.png";
 
 /**
@@ -35,29 +35,11 @@ function useEntrance() {
   return { step, delay };
 }
 
-const steps = [
-  {
-    title: "Check your inbox",
-    body: "Your login details and receipt just went out by email. Look for a message from Creative Adhyayan — check spam if it hasn't landed in five minutes.",
-    icon: Mail,
-  },
-  {
-    title: "Join the WhatsApp group",
-    body: "This is where reminders, Q&A, and the rest of the cohort live. Tap below to join before Day 1.",
-    icon: MessageCircle,
-  },
-  {
-    title: "Start Day 1 on Monday",
-    body: "Your first lesson unlocks on the next program start date. Use the days before then to set up your workspace and skim the syllabus.",
-    icon: Calendar,
-  },
-];
-
 export default function ThankYouPage() {
   const { step, delay } = useEntrance();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-violet-50 via-white to-white">
+    <section className="relative flex min-h-screen flex-col overflow-hidden bg-gradient-to-b from-violet-50 via-white to-white">
       <style>{`
         @keyframes heroGlow {
           0%, 100% { opacity: 0.4; transform: translateX(-50%) scale(1); }
@@ -80,7 +62,7 @@ export default function ThankYouPage() {
 
       {/* navbar — identical to HeroSection */}
       <nav
-        className={`relative mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:flex-nowrap sm:px-6 sm:py-6 ${step()}`}
+        className={`relative mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:flex-nowrap sm:px-6 sm:py-6 ${step()}`}
         style={delay(0)}
       >
         <a
@@ -98,7 +80,7 @@ export default function ThankYouPage() {
         </span>
       </nav>
 
-      <div className="relative mx-auto max-w-3xl px-4 pt-8 pb-10 text-center sm:px-6 sm:pt-12 sm:pb-14">
+      <div className="relative mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center px-4 pt-8 pb-10 text-center sm:px-6 sm:pt-12 sm:pb-14">
         {/* check badge — one deliberate motion moment, matching the hero's single glow beat */}
         <div
           className={`check-pop mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-violet-600 text-white shadow-lg shadow-violet-300/60 sm:h-20 sm:w-20 ${step()}`}
@@ -109,7 +91,7 @@ export default function ThankYouPage() {
 
         {/* eyebrow */}
         <span
-          className={`mt-6 inline-flex items-center gap-1.5 rounded-full border border-violet-200 bg-violet-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-violet-700 sm:px-4 sm:py-1.5 sm:text-xs ${step()}`}
+          className={`mt-6 inline-flex items-center gap-1.5 self-center rounded-full border border-violet-200 bg-violet-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-violet-700 sm:px-4 sm:py-1.5 sm:text-xs ${step()}`}
           style={delay(80)}
         >
           Landing Page Mastery Program
@@ -150,36 +132,6 @@ export default function ThankYouPage() {
             <MessageCircle className="h-4 w-4" />
             Connect On WhatsApp
           </a>
-        </div>
-
-        {/* what happens next — a genuine sequence, so numbering/icons earn their place */}
-        <div
-          className={`mt-14 text-left sm:mt-16 ${step()}`}
-          style={delay(420)}
-        >
-          <h2 className="text-center text-lg font-bold text-slate-900 sm:text-xl">
-            What happens next
-          </h2>
-          <div className="mt-8 space-y-5">
-            {steps.map(({ title, body, icon: Icon }, i) => (
-              <div
-                key={title}
-                className="flex items-start gap-4 rounded-2xl border border-violet-100 bg-white p-4 shadow-sm shadow-violet-100 sm:p-5"
-              >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-violet-50 text-violet-600">
-                  <Icon className="h-5 w-5" />
-                </span>
-                <div>
-                  <h3 className="text-[15px] font-bold text-slate-900">
-                    {title}
-                  </h3>
-                  <p className="mt-1 text-sm leading-relaxed text-slate-600">
-                    {body}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* support */}
