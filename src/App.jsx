@@ -124,13 +124,13 @@ export default function ThankYouPage() {
           style={delay(360)}
         >
           <a
-            href="https://wa.me/919899669649"
+            href="https://chat.whatsapp.com/IotL8S7qzMwIBjbPPFKPc5"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-emerald-500 bg-white px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-emerald-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-500 hover:text-white hover:shadow-lg hover:shadow-emerald-200 sm:w-auto"
           >
             <MessageCircle className="h-4 w-4" />
-            Connect On WhatsApp
+            Join The WhatsApp Group
           </a>
         </div>
 
@@ -145,7 +145,7 @@ export default function ThankYouPage() {
             href="mailto:support@creativeadhyayan.com"
             className="font-semibold text-violet-600 underline decoration-violet-300 underline-offset-4 hover:text-violet-700"
           >
-            support@creativeadhyayan.com
+            Sohil@sohilalvi.in
           </a>
         </p>
       </div>
