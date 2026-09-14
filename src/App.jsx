@@ -65,16 +65,12 @@ export default function ThankYouPage() {
         className={`relative mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:flex-nowrap sm:px-6 sm:py-6 ${step()}`}
         style={delay(0)}
       >
-        <a
-          href="https://rzp.io/rzp/AD2PP0lT"
-          className="flex min-w-0 items-center gap-2 text-sm font-bold text-slate-900 sm:text-lg"
-        >
+        
           <img
             src={CALogo}
             alt="Creative Adhyayan"
             className="h-8 w-auto shrink-0 object-contain transition-transform duration-300 hover:rotate-12 sm:h-12"
           />
-        </a>
         <span className="shrink-0 text-[11px] font-semibold uppercase tracking-wide text-violet-600 sm:text-sm">
           Order confirmed
         </span>
