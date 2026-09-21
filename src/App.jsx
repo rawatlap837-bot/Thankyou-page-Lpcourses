@@ -65,12 +65,12 @@ export default function ThankYouPage() {
         className={`relative mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:flex-nowrap sm:px-6 sm:py-6 ${step()}`}
         style={delay(0)}
       >
-        
-          <img
-            src={CALogo}
-            alt="Creative Adhyayan"
-            className="h-8 w-auto shrink-0 object-contain transition-transform duration-300 hover:rotate-12 sm:h-12"
-          />
+
+        <img
+          src={CALogo}
+          alt="Creative Adhyayan"
+          className="h-8 w-auto shrink-0 object-contain transition-transform duration-300 hover:rotate-12 sm:h-12"
+        />
         <span className="shrink-0 text-[11px] font-semibold uppercase tracking-wide text-violet-600 sm:text-sm">
           Order confirmed
         </span>
@@ -120,7 +120,7 @@ export default function ThankYouPage() {
           style={delay(360)}
         >
           <a
-            href="https://chat.whatsapp.com/IotL8S7qzMwIBjbPPFKPc5"
+            href="https://chat.whatsapp.com/Fpnqa9IuNNp1cfpwW5T5Fo"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-emerald-500 bg-white px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-emerald-600 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-emerald-500 hover:text-white hover:shadow-lg hover:shadow-emerald-200 sm:w-auto"
